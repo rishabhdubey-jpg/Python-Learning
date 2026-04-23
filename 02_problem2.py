@@ -1,5 +1,7 @@
-a = 37
+# Write a program to fill in a letter template given below with name and date.
 
-b = 5
+letter = ''' Dear <|Name|>,
+You are selected!
+<|Date|> '''
 
-print("The Remainder when a is divided by b is: ", a%b)
+print(letter.replace("<|Name|>","Rishabh").replace("<|Date|>", "24 September 2050"))

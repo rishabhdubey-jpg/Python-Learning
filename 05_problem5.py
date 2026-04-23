@@ -1,4 +1,4 @@
-a = int(input("Enter number 1: "))
-b = int(input("Enter number 2: "))
+# Write a program to format the following letter using escape sequence characters.
 
-print("The Average of the two no. is: ", (a+b)/2)
+letter = "Dear Rishabh, \n\tThis repository is nice. \nThanks!"
+print(letter)

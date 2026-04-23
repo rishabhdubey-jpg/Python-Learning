@@ -1,4 +1,6 @@
-a = int(input("Enter number 1: "))
-b = int(input("Enter number 2: "))
+# Replace the double space from problem 3 with single spaces.
 
-print("a is greater than b is", a>b)
+name = "Harry is a good  boy and  "
+
+print(name.replace("  ", " "))
+print(name) # Strings are immutable which means that you cannot change them by running functions on them.

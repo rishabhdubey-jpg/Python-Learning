@@ -1,5 +1,5 @@
-a = 3
+# Write a python program to display a user entered name followed by Good Afternoon using input () function.
 
-b = 5
+name = input("Enter your name: ")
 
-print(a+b)
+print(f"Good Afternoon, {name} ")

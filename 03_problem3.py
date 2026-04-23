@@ -1,3 +1,5 @@
-a = input("Enter the value of a: ")
+# Write a program to detect double space in a string.
 
-print(type(a))
+name = "Rishabh is a good  boy and  "
+
+print(name.find("  "))

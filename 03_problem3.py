@@ -1,5 +1,5 @@
-# Write a program to detect double space in a string.
+# Check that a tuple type cannot be changed in python.
 
-name = "Rishabh is a good  boy and  "
+a = (223, 45, "Rishabh")
 
-print(name.find("  "))
+a[2] = "Rdx"    # TypeError: 'tuple' object does not support item assignment, bcuz it is a immutable container

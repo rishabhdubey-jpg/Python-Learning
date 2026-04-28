@@ -1,4 +1,9 @@
-# Write a program to format the following letter using escape sequence characters.
+# Write a program to count the number of zeros in the following tuple:
+# a = (7, 0, 8, 0, 0, 9)
 
-letter = "Dear Rishabh, \n\tThis repository is nice. \nThanks!"
-print(letter)
+a = (7, 0, 8, 0, 0, 9)
+
+# i = a.count(0)
+# print(i)
+
+print(a.count(0))

@@ -1,6 +1,4 @@
-# Replace the double space from problem 3 with single spaces.
+# Write a program to sum a list with 4 numbers.
 
-name = "Harry is a good  boy and  "
-
-print(name.replace("  ", " "))
-print(name) # Strings are immutable which means that you cannot change them by running functions on them.
+l = [1, 5, 3, 2]
+print(sum(l))

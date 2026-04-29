@@ -1,5 +1,9 @@
-# Check that a tuple type cannot be changed in python.
+# Can we have a set with 18 (int) and ' 18' (str) as a value in it?
 
-a = (223, 45, "Rishabh")
+s = set()
+s.add(18)
+s.add("18")
 
-a[2] = "Rdx"    # TypeError: 'tuple' object does not support item assignment, bcuz it is a immutable container
+print(s)
+
+# Yes, we have a set with 18 (int) and ' 18' (str) as a value in it. 

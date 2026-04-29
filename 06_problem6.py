@@ -1,5 +1,21 @@
-a = int(input("Enter your number: "))
+# Create an empty dictionary. Allow 4 friends to enter their favorite language as value and use key as their names. Assume that the names are unique.
 
-print("The square of the number is", a ** 2)
-print("The square of the number is", a*a)
-# print("The square of the number is", a^2) # Incorrect for finding square of a number in Python
+d = {}
+
+name = input("Enter friends name: ")
+lang = input("Enter Language name: ")
+d.update({name: lang})
+
+name = input("Enter friends name: ")
+lang = input("Enter Language name: ")
+d.update({name: lang})
+
+name = input("Enter friends name: ")
+lang = input("Enter Language name: ")
+d.update({name: lang})
+
+name = input("Enter friends name: ")
+lang = input("Enter Language name: ")
+d.update({name: lang})
+
+print(d)

@@ -1,23 +1,10 @@
-# If the names of 2 friends are same; what will happen to the program in problem 6?
+# Write a program to find out whether a given post is talking about "Rishabh" or not.
 
-d = {}
+post = input("Enter the post: ")
 
-name = input("Enter friends name: ")
-lang = input("Enter Language name: ")
-d.update({name: lang})
+if("rishabh" in post.lower()):
+    print("This post is talking about rishabh")
 
-name = input("Enter friends name: ")
-lang = input("Enter Language name: ")
-d.update({name: lang})
+else:
+    print("This post is not talking about rishabh")
 
-name = input("Enter friends name: ")
-lang = input("Enter Language name: ")
-d.update({name: lang})
-
-name = input("Enter friends name: ")
-lang = input("Enter Language name: ")
-d.update({name: lang})
-
-print(d)
-
-# Because of the update func, the recently added lang is the final fav lang for that name, and the older one will be removed from the dictionary.

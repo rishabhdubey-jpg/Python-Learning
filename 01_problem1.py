@@ -1,12 +1,18 @@
-# Write a program to create a dictionary of Hindi words with values as their English translation. Provide user with an option to look it up!
+# Write a program to find the greatest of four numbers entered by the user.
 
-words = {
-"madad": "Help",
-"kursi": "Chair",
-"billi": "Cat"
+a1= int(input("Enter number 1: "))
+a2= int(input("Enter number 2: "))
+a3= int(input("Enter number 3: "))
+a4 = int(input("Enter number 4: "))
 
-}
+if(a1>a2 and a1>a3 and a1>a4):
+    print("Greatest number is a1: ", a1)
 
-word = input("Enter the word you want meaning of: ")
+elif(a2>a1 and a2>a3 and a2>a4):
+    print("Greatest number is a2: ", a2)
 
-print(words[word])
+elif(a3>a1 and a3>a2 and a3>a4):
+    print("Greatest number is a3: ", a3)
+
+elif(a4>a1 and a4>a2 and a4>a3):
+    print("Greatest number is a4: ", a4)

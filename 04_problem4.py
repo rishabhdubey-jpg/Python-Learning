@@ -1,17 +1,8 @@
-# What will be the length of following set s:
-# s = set()
-# s.add(20)
-# s.add(20.0)
-# s.add('20') # length of s after these operations?
+# Write a program to find whether a given username contains less than 10 characters or not.
 
-s = set()
-s.add(20)
-s.add(20.0)
-s.add('20') 
-print(s)
-print("length =", len(s))
+username = input("Enter username: ")
 
-# In Python, comparison operator " == " checks for equality between two values. When comparing
-# an integer ('1") and a floating-point number ('1.0"), Python evaluates their values and determines if
-# they are numerically equal.
-# ( Here integer 20 is equals to floating point number 20.0 )
+if(len(username)<10):
+    print("Your username contains less than 10 characters")
+else:
+    print("Your username contains more than or equal to 10 characters")

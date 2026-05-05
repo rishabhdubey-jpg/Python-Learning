@@ -1,11 +1,11 @@
-# Write a program which finds out whether a given name is present in a list or not.
+# Write a program to find the sum of first n natural numbers using while loop.
 
-l = ["Rishabh", "Bhavna", "Krishna", "Vansh", "Shristi", "Abhi"]
+n = int(input("Enter a number: "))
 
-name = input("Enter your name: ")
-
-if(name in l):
-    print("Your name is in the list")
-
-else:
-    print("Your name is not in the list")
+i = 1
+sum = 0
+while(i<=n):
+    sum += i
+    i += 1
+    
+print(sum)    

@@ -1,12 +1,20 @@
-# Can you change the values inside a list which is contained in set S?
-# s = {8, 7, 12, "Harry", [1,2]}
+# Write a program to print the following star pattern.
+'''
 
-s = {8, 7, 12, "Harry", [1,2]}
+***
+* *     for n=3
+***
 
-s[4][0] = 9
+'''
 
-# No, you cannot change the values inside a list contained in a set in Python. In fact, you cannot even
-# have a list as an element in a set because sets in Python require all their elements to be immutable
-# and hashable. Lists are mutable and not hashable, so they cannot be added to a set.
 
-# If you try to create a set with a list as one of its elements, Python will raise a " TypeError".
+n = int(input("Enter the number: "))
+for i in range(1, n+1):
+    if(i==1 or i==n):
+        print("*" * n, end="")
+    else:
+        print("*", end="")
+        print(" " * (n-2), end="")
+        print("*", end="")
+    print("")
+

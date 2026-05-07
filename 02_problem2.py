@@ -1,8 +1,8 @@
-# Write a program to greet all the person names stored in a list 'l' and which starts with S.
-# l=["Harry", "Soham", "Sachin", "Rahul"]
+# Write a python program using function to convert Celsius to Fahrenheit.
 
-l = ["Harry", "Soham", "Sachin", "Rahul"]
+def c_to_f(c):
+    return (c * (9/5) + 32)
 
-for name in l:
-    if(name.startswith("S")):
-        print(f"Hello {name}")
+c = int(input("Enter temperature in °C: "))
+f = c_to_f(c)
+print(f"{round(f, 2)}F")

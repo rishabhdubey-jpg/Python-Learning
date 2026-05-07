@@ -1,13 +1,8 @@
-# Write a program to print the following star pattern.
-'''
+# Write a python function to print multiplication table of a given number.
 
-*
-**
-***     for n=3
+def table(n):
+    for i in range(1, 11):
+        print(f"{n} x {i} = {n*i}")
 
-'''
-
-
-n = int(input("Enter the number: "))
-for i in range(1, n+1):
-    print("*"* (i)) 
+n = int(input("Enter a number: "))
+table(n)

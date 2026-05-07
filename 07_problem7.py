@@ -1,14 +1,12 @@
-# Write a program to print the following star pattern.
-'''
+# Write a python function to remove a given word from a list ad strip it at the same time.
 
-  *
- ***
-***** for n = 3
+def rem(l, word):
+    n = [] 
+    for item in l:
+        if not(item == word):
+            n.append(item.strip(word))
+    return n
 
-'''
+l = ["Rishabh", "Krishna", "Bhavna", "Van", "an"]
 
-n = int(input("Enter the number: "))
-for i in range(1, n+1):
-    print(" "* (n-i), end="")    # (n-i) for the spaces before the star on every line, and (, end="") is for not taking a new line as from default print statement.
-    print("*"* (2*i-1), end="")  # (2*i-1) is a series of odd numbers.
-    print("")                    # For the new line.
+print(rem(l, "an"))

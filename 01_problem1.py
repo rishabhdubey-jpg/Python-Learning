@@ -1,6 +1,17 @@
-#  Write a program to print multiplication table of a given number using for loop.
+# Write a program using functions to find greatest of three numbers.
 
-n = int(input("Enter a number: "))
+def greatest(a, b, c):
+    if(a>b and a>c):
+        return a
+    
+    elif(b>a and b>c):
+        return b
+    
+    elif(c>b and c>a):
+        return c
 
-for i in range(1, 11):
-    print(f"{n} X {i} = {n * i}")
+a = int(input("Enter first number: "))
+b = int(input("Enter second number: "))
+c = int(input("Enter third number: "))
+
+print(greatest(a, b, c))

@@ -1,8 +1,6 @@
-# Attempt problem 1 using while loop,
+# How do you prevent a python print() function to print a new line at the end.
 
-n = int(input("Enter a number: "))
-
-i = 1
-while(i < 11):
-    print(f"{n} X {i} = {n * i}")
-    i += 1
+print("a")
+print("b")
+print("c", end="")
+print("d", end="")

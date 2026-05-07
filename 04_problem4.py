@@ -1,11 +1,9 @@
-#  Write a program to find whether a given number is prime or not.
+# Write a recursive function to calculate the sum of first n natural numbers.
+
+def sum(n):
+    if(n == 1):
+        return 1
+    return (sum(n-1) + n)
 
 n = int(input("Enter a number: "))
-
-for i in range(2, n):
-    if(n%i) == 0:
-        print("Number is not prime.")
-        break
-
-else:
-    print("Number is prime.")
+print(sum(n))

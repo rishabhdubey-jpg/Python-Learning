@@ -1,11 +1,16 @@
-# Write a program to find the sum of first n natural numbers using while loop.
+# Write a python function to print first n lines of the following pattern:
+'''
 
-n = int(input("Enter a number: "))
+***
+**      for n = 3
+*
 
-i = 1
-sum = 0
-while(i<=n):
-    sum += i
-    i += 1
-    
-print(sum)    
+'''
+
+def pattern(n):
+    if(n == 0):
+        return
+    print("*" * n)
+    pattern(n-1)
+
+pattern(3)

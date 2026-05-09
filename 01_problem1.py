@@ -1,17 +1,10 @@
-# Write a program using functions to find greatest of three numbers.
+# Write a program to read the text from a given file 'poems.txt' and find out whether it contains the word 'twinkle'.
 
-def greatest(a, b, c):
-    if(a>b and a>c):
-        return a
-    
-    elif(b>a and b>c):
-        return b
-    
-    elif(c>b and c>a):
-        return c
+with open("poems.txt") as f:
+    content = f.read()
 
-a = int(input("Enter first number: "))
-b = int(input("Enter second number: "))
-c = int(input("Enter third number: "))
+if("twinkle" in content):
+    print("The word 'twinkle' is present in the content")
+else:
+    print("The word 'twinkle' is not present in the content")
 
-print(greatest(a, b, c))

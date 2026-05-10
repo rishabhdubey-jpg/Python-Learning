@@ -1,9 +1,10 @@
-# Write a recursive function to calculate the sum of first n natural numbers.
+# A file contains a word "Donkey" multiple times. You need to write a program which replace this word with ##### by updating the same file.
 
-def sum(n):
-    if(n == 1):
-        return 1
-    return (sum(n-1) + n)
+with open("donkey.txt", "r") as f:
+    content = f.read()
 
-n = int(input("Enter a number: "))
-print(sum(n))
+contentNew = content.replace("donkey", "#####")
+
+with open("donkey.txt", "w") as f:
+        f.write(contentNew)
+    

@@ -1,8 +1,8 @@
-# Write a python function which converts inches to cms.
+# Write a program to mine a log file and find out whether it contains 'python'.
 
-def inch_to_cms(inch):
-    return (inch * 2.54)
-
-n = int(input("Enter value in inches: "))
-
-print(f"The corresponding value in cms is {inch_to_cms(n)}")
+with open("log.txt") as f:
+    content = f.read()
+if("python" in content):
+    print("Yes, python is present")
+else:
+    print("No, python is not present")

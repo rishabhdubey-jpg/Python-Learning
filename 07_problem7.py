@@ -1,12 +1,14 @@
-# Write a python function to remove a given word from a list ad strip it at the same time.
+# Write a program to find out the line number where python is present from ques 6.
 
-def rem(l, word):
-    n = [] 
-    for item in l:
-        if not(item == word):
-            n.append(item.strip(word))
-    return n
+with open("log.txt") as f:
+    lines = f.readlines()
 
-l = ["Rishabh", "Krishna", "Bhavna", "Van", "an"]
+lineno = 1
+for line in lines:
+    if("python" in line):
+        print(f"Yes python is present. Line no: {lineno}")
+        break
+    lineno += 1
 
-print(rem(l, "an"))
+else:
+    print("No Python is not present")

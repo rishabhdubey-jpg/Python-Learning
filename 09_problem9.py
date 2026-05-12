@@ -1,20 +1,13 @@
-# Write a program to print the following star pattern.
-'''
+# Write a program to find out whether a file is identical & matches the content of another file.
 
-***
-* *     for n=3
-***
+with open("this.txt") as f:
+    content1 = f.read()
 
-'''
+with open("this_copy.txt") as f:
+    content2 = f.read()
 
+if(content1 == content2):
+    print("Both the files contains identical content.")
 
-n = int(input("Enter the number: "))
-for i in range(1, n+1):
-    if(i==1 or i==n):
-        print("*" * n, end="")
-    else:
-        print("*", end="")
-        print(" " * (n-2), end="")
-        print("*", end="")
-    print("")
-
+else: 
+    print("Both the files having different contents.")

@@ -1,8 +1,7 @@
-# Write a python function to print multiplication table of a given number.
+# Write a program to make a copy of a text file "this. txt"
 
-def table(n):
-    for i in range(1, 11):
-        print(f"{n} x {i} = {n*i}")
+with open("this.txt") as f:
+    content = f.read()
 
-n = int(input("Enter a number: "))
-table(n)
+with open("this_copy.txt", "w") as f:
+    f.write(content)

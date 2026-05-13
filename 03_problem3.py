@@ -1,15 +1,12 @@
-# Write a program to generate multiplication tables from 2 to 20 and write it to the different files. 
-# Place these files in a folder for a 13 - year old.
+# Create a class with a class attribute a; create an object from it and set 'a' directly using object.a = o. Does this change the class attribute?
 
-def generateTable(n):
-    table = ""
-    for i in range(1, 11):
-        table += f"{n} x {i} = {n*i}\n"
-    
-    with open(f"tables/table_{n}.txt", "w") as f:
-        f.write(table)
+class Demo:
+    a = 4
 
+o = Demo()
+print(o.a) # Prints the class attribute because instance attribute is not present
+o.a = 0    # Instance attribute is set
+print(o.a) # Prints the instance attribute because instance attribute is present
+print(Demo.a) # Prints the class attribute
 
-for i in range(2, 21):
-    generateTable(i)
-
+# No, this will not changes the class attribute..

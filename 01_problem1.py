@@ -1,10 +1,14 @@
-# Write a program to read the text from a given file 'poems.txt' and find out whether it contains the word 'twinkle'.
+# Create a Class "Programmer" for storing information of few programmers working at Microsoft
 
-with open("poems.txt") as f:
-    content = f.read()
+class Programmer:
+    company = "Microsoft"
+    def __init__(self, name, salary, pin):
+        self.name = name
+        self.salary = salary
+        self.pin = pin
 
-if("twinkle" in content):
-    print("The word 'twinkle' is present in the content")
-else:
-    print("The word 'twinkle' is not present in the content")
+p = Programmer("Rishabh", 1200000, 483113)
+print(p.name, p.salary, p.pin, p.company)
 
+k = Programmer("Krishna", 1400000, 783411)
+print(k.name, k.salary, k.pin, k.company)

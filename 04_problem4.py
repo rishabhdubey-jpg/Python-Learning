@@ -1,10 +1,26 @@
-# A file contains a word "Donkey" multiple times. You need to write a program which replace this word with ##### by updating the same file.
+# Add a static method in problem 2, to greet the user with hello.
 
-with open("donkey.txt", "r") as f:
-    content = f.read()
-
-contentNew = content.replace("donkey", "#####")
-
-with open("donkey.txt", "w") as f:
-        f.write(contentNew)
+class calculator: 
+    def __init__(self, n):
+        self.n = n
     
+    def square(self):
+        print(f"The square of {self.n} is {self.n*self.n}")
+    
+    def cube(self):
+        print(f"The cube of {self.n} is {self.n*self.n*self.n}")
+    
+    def sq_root(self):
+        print(f"The square root of {self.n} is {self.n**(1/2)}")
+
+    @staticmethod
+    def greet():
+        print("Good morning..")
+
+p = calculator(4)
+p.greet()
+p.square()
+p.greet()
+p.cube()
+p.greet()
+p.sq_root()

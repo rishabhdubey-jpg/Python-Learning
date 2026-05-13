@@ -1,25 +1,19 @@
-# The game() function in a program lets a user play a game and returns the score as an integer. 
-# You need to read a file 'Hi-score.txt' which is either blank or contains the previous Hi-score. 
-# You need to write a program to update the Hi-score whenever the game() function breaks the Hi-score.
-import random
+# Write a class "calculator" capable of finding square, cube and square root of a number.
 
-def game():
-    print("You are playing the game..")
-    score = random.randint(1, 65)
-    # Fetch the hiscore
-    with open("hiscore.txt") as f:
-        hiscore = f.read()
-        if(hiscore!=""):
-            hiscore = int(hiscore)
-        else:
-            hiscore = 0
-        
-    print(f"Your score is {score}")
-    if(score>hiscore):
-        # write this hiscore to the file
-        with open("hiscore.txt", "w") as f:
-            f.write(str(score))
+class calculator: 
+    def __init__(self, n):
+        self.n = n
     
-    return score
+    def square(self):
+        print(f"The square of {self.n} is {self.n*self.n}")
+    
+    def cube(self):
+        print(f"The cube of {self.n} is {self.n*self.n*self.n}")
+    
+    def sq_root(self):
+        print(f"The square root of {self.n} is {self.n**(1/2)}")
 
-game()
+p = calculator(4)
+p.square()
+p.cube()
+p.sq_root()

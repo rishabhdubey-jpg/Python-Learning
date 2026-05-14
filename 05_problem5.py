@@ -1,20 +1,27 @@
-# Write a class Train which has methods to book a ticket, get status (no of seats) and get fare information of train running under Indian Railways.
-from random import randint
+class Vector:
+    def __init__(self, x, y, z):
+        self.x = x
+        self.y = y
+        self.z = z
 
-class Train:
-    def __init__(self, trainNo):
-        self.trainNo = trainNo
-    
-    def book(self, fro, to):
-        print(f"Ticket is booked in train no: {self.trainNo} from {fro} to {to}")
+    def __add__(self, other):
+        result = Vector(self.x + other.x, self.y + other.y, self.z + other.z)
+        return result
 
-    def getStatus(self):
-        print(f"Train no: {self.trainNo} is running on time")
+    def __mul__(self, other):
+        result = self.x * other.x + self.y * other.y + self.z * other.z
+        return result
 
-    def getFare(self, fro, to):
-        print(f"Ticket fare in train no: {self.trainNo} from {fro} to {to} is: {randint(300, 1000)}")
+    def __str__(self):
+        return f"Vector({self.x}, {self.y}, {self.z})"
 
-t = Train(12398)
-t.book("Jabalpur", "Ujjain")
-t.getStatus()
-t.getFare("Jabalpur", "Ujjain")
+# Test the implementation
+v1 = Vector(1, 2, 3)
+v2 = Vector(4, 5, 6)
+v3 = Vector(7, 8, 9)  # Same dimension vector
+
+print(v1 + v2)  # Output: Vector(5, 7, 9)
+print(v1 * v2)  # Output: 32
+
+print(v1 + v3)  # Output: Vector(8, 10, 12)
+print(v1 * v3)  # Output: 50

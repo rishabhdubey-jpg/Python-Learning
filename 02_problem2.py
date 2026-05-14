@@ -1,19 +1,17 @@
-# Write a class "calculator" capable of finding square, cube and square root of a number.
+# Create a class 'Pets' from a class 'Animals' and further create a class 'Dog' from 'Pets'. Add a method 'bark' to class'Dog'.
 
-class calculator: 
-    def __init__(self, n):
-        self.n = n
-    
-    def square(self):
-        print(f"The square of {self.n} is {self.n*self.n}")
-    
-    def cube(self):
-        print(f"The cube of {self.n} is {self.n*self.n*self.n}")
-    
-    def sq_root(self):
-        print(f"The square root of {self.n} is {self.n**(1/2)}")
+class Animals:
+    pass
 
-p = calculator(4)
-p.square()
-p.cube()
-p.sq_root()
+class Pets(Animals):
+    pass
+
+
+class Dogs(Pets):
+
+    @staticmethod
+    def bark():
+        print("Bow Bow!")
+
+d = Dogs()
+d.bark()

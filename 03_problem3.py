@@ -1,12 +1,21 @@
-# Create a class with a class attribute a; create an object from it and set 'a' directly using object.a = o. Does this change the class attribute?
+# Create a class 'Employee' and add salary and increment properties to it.
+# Write a method 'salaryAfterIncrement' method with a @property decorator with a setter
+# which changes the value of increment based on the salary.
 
-class Demo:
-    a = 4
+class Employee:
+    salary = 234
+    increment = 20
 
-o = Demo()
-print(o.a) # Prints the class attribute because instance attribute is not present
-o.a = 0    # Instance attribute is set
-print(o.a) # Prints the instance attribute because instance attribute is present
-print(Demo.a) # Prints the class attribute
+    @property
+    def salaryAfterIncrement(self):
+        return (self.salary + self.salary * (self.increment/100))
 
-# No, this will not changes the class attribute..
+    @salaryAfterIncrement.setter
+    def salaryAfterIncrement(self, salary):
+        self.increment = ((salary/self.salary) -1)*100
+
+e = Employee()
+# print(e.salaryAfterIncrement)
+e.salaryAfterIncrement = 280.8
+print(e.increment)
+

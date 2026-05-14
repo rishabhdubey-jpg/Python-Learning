@@ -1,14 +1,11 @@
-# Write a program to find out the line number where python is present from ques 6.
+# Override the __len__() method on vector of problem 5 to display the dimension of the vector.
 
-with open("log.txt") as f:
-    lines = f.readlines()
+class Vector:
+    def __init__(self, l):
+        self.l = l
 
-lineno = 1
-for line in lines:
-    if("python" in line):
-        print(f"Yes python is present. Line no: {lineno}")
-        break
-    lineno += 1
+    def __len__(self):
+        return len(self.l)
 
-else:
-    print("No Python is not present")
+v1 = Vector([1, 2, 3])
+print(len(v1))

@@ -1,14 +1,22 @@
-# Create a Class "Programmer" for storing information of few programmers working at Microsoft
+# Create a class (2-D vector) and use it to create another class representing a 3-D vector.
 
-class Programmer:
-    company = "Microsoft"
-    def __init__(self, name, salary, pin):
-        self.name = name
-        self.salary = salary
-        self.pin = pin
+class TwoDVector:
+    def __init__(self, i, j):
+        self.i = i
+        self.j = j
 
-p = Programmer("Rishabh", 1200000, 483113)
-print(p.name, p.salary, p.pin, p.company)
+    def show(self):
+        print(f"The vector is {self.i}i + {self.j}j")
 
-k = Programmer("Krishna", 1400000, 783411)
-print(k.name, k.salary, k.pin, k.company)
+class ThreeDVector(TwoDVector):
+    def __init__(self, i, j, k):
+        super().__init__(i, j)
+        self.k = k
+
+    def show(self):
+        print(f"The vector is {self.i}i + {self.j}j + {self.k}k")
+
+a = TwoDVector(1, 2)
+a.show()
+b = ThreeDVector(5, 3, 7)
+b.show()

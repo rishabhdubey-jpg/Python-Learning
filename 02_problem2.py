@@ -1,17 +1,7 @@
-# Create a class 'Pets' from a class 'Animals' and further create a class 'Dog' from 'Pets'. Add a method 'bark' to class'Dog'.
+# Write a program to print third, fifth and seventh element from a list using enumerate function.
 
-class Animals:
-    pass
+l = [1, 2, 3, 4, 5, 6, 7, 8]
 
-class Pets(Animals):
-    pass
-
-
-class Dogs(Pets):
-
-    @staticmethod
-    def bark():
-        print("Bow Bow!")
-
-d = Dogs()
-d.bark()
+for i, item in enumerate(l):
+    if i == 2 or i == 4 or i == 6:
+        print(item)

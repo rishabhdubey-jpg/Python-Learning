@@ -1,22 +1,22 @@
-# Create a class (2-D vector) and use it to create another class representing a 3-D vector.
+# Write a program to open three files 1.txt, 2.txt and 3.txt if any these files are not 
+# present, a message without exiting the program must be printed prompting the same.
 
-class TwoDVector:
-    def __init__(self, i, j):
-        self.i = i
-        self.j = j
+try:
+    with open("1.txt", "r") as f:
+        print(f.read())
+except Exception as e:
+    print(e)
 
-    def show(self):
-        print(f"The vector is {self.i}i + {self.j}j")
+try:
+    with open("2.txt", "r") as f:
+        print(f.read())
+except Exception as e:
+    print(e)
 
-class ThreeDVector(TwoDVector):
-    def __init__(self, i, j, k):
-        super().__init__(i, j)
-        self.k = k
+try:
+    with open("3.txt", "r") as f:
+        print(f.read())
+except Exception as e:
+    print(e)
 
-    def show(self):
-        print(f"The vector is {self.i}i + {self.j}j + {self.k}k")
-
-a = TwoDVector(1, 2)
-a.show()
-b = ThreeDVector(5, 3, 7)
-b.show()
+print("Thank you!")

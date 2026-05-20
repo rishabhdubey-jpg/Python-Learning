@@ -1,11 +1,10 @@
-# Override the __len__() method on vector of problem 5 to display the dimension of the vector.
+from flask import Flask
 
-class Vector:
-    def __init__(self, l):
-        self.l = l
+app = Flask(__name__)
 
-    def __len__(self):
-        return len(self.l)
+@app.route("/")
+def hello_world():
+    return "<p>Hello, World! </p>"
 
-v1 = Vector([1, 2, 3])
-print(len(v1))
+
+app.run()

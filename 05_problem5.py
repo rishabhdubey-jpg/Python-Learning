@@ -1,8 +1,12 @@
-# Store the multiplication tables generated in problem 3 in a file named Tables.txt.
+# Write a program to find the maximum of the numbers in a list using the reduce function.
 
-n = int(input("Enter a number: "))
+from functools import reduce
 
-table = [n*i for i in range(1, 11)]
+def greater(a, b):
+    if(a>b):
+        return a
+    return b
 
-with open("tables.txt", "a") as f:
-    f.write(str(f"Table of {n}: {str(table)} \n"))
+l = [5, 3, 555, 40, 23, 98, 450, 6463]
+
+print(reduce(greater, l))

@@ -1,8 +1,11 @@
-# Write a program to display a/b where a and b are integers. If b=0, display infinite by handling the 'ZeroDivisionError'.
-try:
-    a = int(input("Enter a: "))
-    b = int(input("Enter b: "))
-    print(a/b)
+# Write a program to filter a list of numbers which are divisible by 5.
+def divisible5(n):
+    if(n%5 == 0):
+        return True
+    return False
 
-except ZeroDivisionError as e:
-    print("Infinite")
+l = [5, 3, 555, 40, 23, 98, 450]
+
+f = list(filter(divisible5, l))
+print(f)
+
